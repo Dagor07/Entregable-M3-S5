@@ -56,10 +56,7 @@
 ### Requirements
 Node.js and json-server installed
 
-### Errores 
-* dashboard
-![alt text](image.png)
 
 ### Pendientes
-*  
+* Enrollments in dashboardVisitor
 * POSTMAN
