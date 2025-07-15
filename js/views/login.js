@@ -5,19 +5,19 @@ export function renderLogin(container) {
   container.innerHTML = `
     <div class="d-flex justify-content-center align-items-center vh-100">
       <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
-        <h2 class="text-center mb-4">Iniciar sesión</h2>
+        <h2 class="text-center mb-4">Login</h2>
         <form id="login-form">
           <div class="mb-3">
-            <label for="username" class="form-label">Usuario</label>
-            <input type="text" id="username" class="form-control" placeholder="Ingresa tu usuario" required />
+            <label for="username" class="form-label">User</label>
+            <input type="text" id="username" class="form-control" placeholder="Enter your user" required />
           </div>
           <div class="mb-3">
-            <label for="password" class="form-label">Contraseña</label>
-            <input type="password" id="password" class="form-control" placeholder="Ingresa tu contraseña" required />
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter your password" required />
           </div>
-          <button type="submit" class="btn btn-success w-100">Ingresar</button>
+          <button type="submit" class="btn btn-success w-100">Enterr</button>
         </form>
-        <p class="text-center mt-3">¿No tienes cuenta? <a href="/register" id="go-register">Regístrate</a></p>
+        <p class="text-center mt-3">Don't have an account? <a href="/register" id="go-register">Register</a></p>
       </div>
     </div>
   `;
