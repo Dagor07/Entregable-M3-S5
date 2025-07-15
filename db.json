@@ -27,6 +27,14 @@
       "date": "2025-07-17",
       "capacity": 5,
       "enrolled": 0
+    },
+    {
+      "id": "e828",
+      "name": "Poll party",
+      "description": "Rumbita",
+      "date": "2025-10-07",
+      "capacity": 100,
+      "enrolled": 0
     }
   ],
   "enrollments": []
