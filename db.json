@@ -1,0 +1,27 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id":"2",
+      "username": "Daniel",
+      "password": "Daniel1",
+      "role": "user"
+    }
+  ],
+  "events": [
+    {
+      "id": "2788",
+      "name": "Miranda",
+      "description": "Rumbita",
+      "date": "2025-07-17",
+      "capacity": 5,
+      "enrolled": 0
+    }
+  ],
+  "enrollments": []
+}
