@@ -30,7 +30,7 @@ export async function renderDashboardVisitor(container) {
                     <p class="card-text"><small class="text-muted">Capacity: ${event.capacity}</small></p>
                   </div>
                   <div class="card-footer text-end bg-white">
-                    <button class="btn btn-success btn-sm btn-register" data-id="${event.id}">Register/button>
+                    <button class="btn btn-success btn-sm btn-register" data-id="${event.id}">Register</button>
                   </div>
                 </div>
               </div>

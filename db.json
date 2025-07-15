@@ -7,10 +7,16 @@
       "role": "admin"
     },
     {
-      "id":"2",
+      "id": "2",
       "username": "Daniel",
       "password": "Daniel1",
       "role": "user"
+    },
+    {
+      "id": "05c6",
+      "username": "Luis",
+      "password": "Luis1",
+      "role": "visitor"
     }
   ],
   "events": [

@@ -61,7 +61,5 @@ Node.js and json-server installed
 ![alt text](image.png)
 
 ### Pendientes
-* enrollments boostrap
-* createEvent boostrap
-* dashboardAdmin.js la opción de editar y eliminar evento 
+*  
 * POSTMAN

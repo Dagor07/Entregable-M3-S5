@@ -1,5 +1,5 @@
 import { getCurrentUser, logout } from '../auth.js';
-import { getEvents } from '../events.js';
+import { getEvents, deleteEvent } from '../events.js';
 import { navigateTo } from '../router.js';
 
 export async function renderDashboardAdmin(container) {
@@ -29,6 +29,10 @@ export async function renderDashboardAdmin(container) {
                     <p class="card-text">${event.description}</p>
                     <p class="card-text"><small class="text-muted">Capacidad: ${event.capacity}</small></p>
                   </div>
+                  <div class="card-footer bg-white d-flex justify-content-end gap-2">
+                    <button class="btn btn-sm btn-outline-primary btn-edit" data-id="${event.id}">Editar</button>
+                    <button class="btn btn-sm btn-outline-danger btn-delete" data-id="${event.id}">Eliminar</button>
+                  </div>
                 </div>
               </div>
             `).join('')}
@@ -38,12 +42,34 @@ export async function renderDashboardAdmin(container) {
     </div>
   `;
 
+  // Botón logout
   document.getElementById('btn-logout').addEventListener('click', () => {
     logout();
     navigateTo('/login');
   });
 
+  // Crear evento
   document.getElementById('btn-create-event').addEventListener('click', () => {
     navigateTo('/dashboard/events/create');
+  });
+
+  // Botones eliminar
+  document.querySelectorAll('.btn-delete').forEach(button => {
+    button.addEventListener('click', async () => {
+      const id = button.dataset.id;
+      const confirmDelete = confirm('¿Estás seguro de eliminar este evento?');
+      if (confirmDelete) {
+        await deleteEvent(id);
+        renderDashboardAdmin(container); // Recargar eventos
+      }
+    });
+  });
+
+  // Botones editar (requiere tener una ruta funcional para editar)
+  document.querySelectorAll('.btn-edit').forEach(button => {
+    button.addEventListener('click', () => {
+      const id = button.dataset.id;
+      navigateTo(`/dashboard/events/edit/${id}`); // Redirigir a vista de edición (debes implementarla)
+    });
   });
 }
