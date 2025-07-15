@@ -8,7 +8,7 @@ export async function login(username, password) {
     localStorage.setItem('user', JSON.stringify(user));
     return user;
   } else {
-    throw new Error('Credenciales inválidas');
+    throw new Error('Invalid credentials');
   }
 }
 
@@ -19,7 +19,7 @@ export async function register(username, password, role = 'visitor') {
     body: JSON.stringify({ username, password, role })
   });
 
-  if (!res.ok) throw new Error('Error al registrar usuario');
+  if (!res.ok) throw new Error();
   const user = await res.json();
   localStorage.setItem('user', JSON.stringify(user));
   return user;
