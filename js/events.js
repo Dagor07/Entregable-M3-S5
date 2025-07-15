@@ -11,7 +11,7 @@ export async function createEvent(event) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(event)
   });
-  if (!res.ok) throw new Error('Error al crear evento');
+  if (!res.ok) throw new Error('Error creating event');
   return res.json();
 }
 
