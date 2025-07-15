@@ -56,3 +56,12 @@
 ### Requirements
 Node.js and json-server installed
 
+### Errores 
+* dashboard
+![alt text](image.png)
+
+### Pendientes
+* enrollments boostrap
+* createEvent boostrap
+* dashboardAdmin.js la opción de editar y eliminar evento 
+* POSTMAN
